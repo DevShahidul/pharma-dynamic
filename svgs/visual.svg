@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="711px" height="408px" viewBox="0 0 711 408" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>visual</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50.0000927%" y1="-16.913271%" x2="50.0000927%" y2="96.7665023%" id="linearGradient-1">
+            <stop stop-color="#FF9966" offset="0%"></stop>
+            <stop stop-color="#FF5E62" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50.0000927%" y1="-16.913271%" x2="50.0000927%" y2="97.7470716%" id="linearGradient-2">
+            <stop stop-color="#FF6A00" offset="0%"></stop>
+            <stop stop-color="#EE0979" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard" transform="translate(-180.000000, -842.000000)" fill-rule="nonzero">
+            <g id="HR-News" transform="translate(180.000000, 795.000000)">
+                <g id="Rectangle-2" transform="translate(0.000000, 47.000000)">
+                    <g id="visual">
+                        <rect id="Rectangle" fill="url(#linearGradient-1)" x="0" y="0" width="711" height="408" rx="10"></rect>
+                        <polygon id="Rectangle-Copy" fill="url(#linearGradient-2)" transform="translate(354.996656, 344.735915) rotate(-180.000000) translate(-354.996656, -344.735915) " points="245.130435 194.471831 464.862876 194.471831 402.39293 495 307.600381 495"></polygon>
+                        <polygon id="Rectangle-Copy-3" fill="url(#linearGradient-2)" transform="translate(90.607624, 109.919907) rotate(-45.000000) translate(-90.607624, -109.919907) " points="-19.4320892 -40.3180244 200.647337 -37.9050563 141.371498 260.157838 46.4292595 259.116884"></polygon>
+                        <polygon id="Rectangle-Copy-4" fill="url(#linearGradient-2)" transform="translate(621.392376, 109.919907) rotate(-315.000000) translate(-621.392376, -109.919907) " points="511.352663 -37.9050563 731.432089 -40.3180244 665.570741 259.116884 570.628502 260.157838"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

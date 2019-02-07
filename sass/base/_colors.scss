@@ -1,0 +1,147 @@
+// Colors
+$white:#ffffff;
+$alabaster:#fafafa;
+$base-text: #0b215f;
+$base-bg: #f4f5fc;
+$secondary-color: #8a95ff;
+$tertiary-color: #9e9f9e;
+$theme-red: #ff6a68;
+$black-rock:#170339;
+$mariner:#357bd9;
+$cod-gray:#151515;
+$shuttle-grey:#646872;
+$bordeaux:#5b0223;
+$bush:#10391e;
+$kingfisher:#3904a2;
+$outer-space:#1d2221;
+$mandy:#e44b4b;
+
+$default-shadow: 0 2px 4px 0 rgba(138, 149, 255, 0.31);
+$base-galleries: rgba(138, 149, 255, 0.41);
+
+
+
+body{
+    color:$base-text;
+}
+h2,h4,h5{
+    color:$base-text; 
+}
+h3{
+    color:$white;
+    
+}
+
+// Color extend 
+%whiteColor{
+    color: $white;
+}
+
+%whiteBackground{
+    background-color: $white;
+}
+
+%alabasterBackground{
+    background-color: $alabaster;
+}
+
+%baseTextColor{
+    color: $base-text;
+}
+
+%baseTextBgColor{
+    background-color: $base-text;
+}
+
+%baseGrayColor{
+    color: $tertiary-color;
+}
+
+
+// header text color
+.main-header-section{
+    @extend %whiteBackground;
+}
+
+
+// Nav color
+.main-nav{
+    li{
+        &> a{
+            @extend %baseTextColor;
+        }
+        ul{
+           @extend %whiteBackground;
+        }
+    }
+}
+
+// Notification colors
+.notification-pop-up-wrap{
+    @extend %whiteBackground;
+}
+
+.notification{
+    .info{
+        .time{
+            color: $shuttle-grey;
+        }
+    }
+}
+
+.recipient-form-wrap{
+    @extend %alabasterBackground;
+}
+
+// Form color
+#{$all-text-inputs}{
+    color: $tertiary-color;
+}
+
+#{$all-text-inputs-focus}{
+    color: $secondary-color;
+    border-color: $secondary-color;
+}
+
+
+.recipient-form-wrap{
+    input{
+        &[type="email"]{
+            border: 1px solid $secondary-color;
+        }
+        &[type="submit"]{
+            background: $secondary-color;
+            color: $white;
+            border-color: $secondary-color;
+        }
+
+    }
+}
+
+
+
+// Grid item colors
+.avatar-inner{
+    span{
+        color:$base-text;  
+    }
+}
+
+.inner-item{
+    h6{
+        color:$white;  
+    }
+    p{
+        color:$white;
+    }
+}
+
+.news-wrap{
+    .item-2{
+        .avatar{
+            span{
+                color:$shuttle-grey; 
+            }
+        }
+    }
+}

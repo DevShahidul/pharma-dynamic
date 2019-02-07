@@ -1,0 +1,118 @@
+
+.main-header-section{
+    @extend %fw;
+    .header-inner{
+        position: relative;
+    }
+}
+.logo{
+    // @include abs-pos(0, auto, auto, 0);
+    float: left;
+    margin-top: 29px;
+    width: 157px;
+    margin-right: 0;
+    img{
+        width: 100%;
+        max-width: 157px;
+    }
+}
+
+.notification-triger{
+    float: left;
+    width: 157px;
+    .icon-wrap{
+        float: right;
+        width: 95px; 
+        height: 93px;
+        position: relative;
+        z-index: 9999;
+        cursor: pointer;
+        background-color: $white;
+    }
+    .icon{
+        @include abs-pos(50%, null, null, 50%);
+        @include transform(translate(-50%, -50%));
+        text-align: center;
+        position: relative;
+        width: 22px; 
+        height: 28px;
+        img{
+            width: 100%;
+        }
+        span{
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ff6a68;
+            @include abs-pos(2px, -2px, auto, auto);
+        }
+    }
+}
+
+.notification-pop-up-wrap{
+    position: absolute;
+    right: 30px;
+    top: 92px;
+    z-index: 9999;
+    width: 490px;
+    padding-top: 75px;
+    @include transform(translateY(-120%));
+    @include transition;
+}
+.show .notification-pop-up-wrap{
+    @include transform(translateY(0));
+}
+.show{
+    overflow: hidden;
+    position: relative;
+    &::after{
+        @include abs-pos(0, 0, 0, 0);
+        @include beforeAfter($zindex: inherit);
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+}
+.notification-item-wrap{
+    @extend %fw;
+    height: 305px;
+    padding: 0 63px;
+    overflow-y: auto;
+}
+.notification{
+    margin-top: 15px;
+    @extend %fw;
+    .avatar{
+        float: left;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .info{
+        float: left;
+        width: 270px;
+        margin-left: 18px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #c3c9d8;
+    }
+    &:last-child{
+        .info{ 
+            border-bottom-color: transparent;
+        }
+    }
+}
+
+.recipient-form-wrap{
+    @extend %fw;
+    margin-top: 40px;
+    padding: 40px 63px 60px;
+    border-top: 2px solid #c3c9d8;
+    input{
+        @extend %fw;
+        margin: 0;
+        margin-top: 20px;
+
+    }
+}
+
+
+

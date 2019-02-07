@@ -1,0 +1,31 @@
+
+// Gradient style 
+%blueGradient{
+    @include gradient(#00efd1, #00acea);
+}
+
+// Pourple 
+%pourpleGradient{
+    @include gradient(#8e2de2, #4a00e0);
+}
+
+//Green
+%greenGradient{
+    @include gradient(#11998e, #38ef7d);
+}
+
+//Light green
+%lightGreenGradient{
+    @include gradient(#f8ffae, #43c6ac);
+}
+
+// Red
+%redGradient{
+    @include gradient(#ff9966, #ff5e62);
+}
+
+// Magenta
+%magentaGradient{
+    @include gradient(#f953c6, #b91d73);
+}
+

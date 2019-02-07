@@ -1,0 +1,30 @@
+body{
+    background: $base-bg;
+    overflow-x: hidden; 
+    overflow-y:auto; 
+  }
+
+img{
+     display: block;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+  header, 
+  main, 
+  section{
+      @extend %fw;
+  }
+
+  .common-wrap{
+      width: 1140px;
+      margin: 0 auto;
+      @include clearFix;
+      padding:0 30px;
+  }
+
+  .main-content-wrap{
+      overflow: hidden;
+  }

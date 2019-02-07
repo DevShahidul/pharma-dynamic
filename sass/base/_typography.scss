@@ -1,0 +1,166 @@
+// roboto font face
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+
+
+// fonts
+$default-font-size: 24px;
+$default-line-height: 34px;
+$default-font-family: 'Roboto', sans-serif;
+$default-font-weight: 300;
+$nav-font-size: 15px;
+$nav-line-height: $nav-font-size + 9;
+/*$subnav-font-size: $default-font-size + 2;
+$subnav-line-height: $subnav-font-size + 6;*/
+
+$regularFontWeight: 400;
+$mediumFontWeight: 500;
+$boldFontWeight: 700;
+
+body{
+    font-size: $default-font-size;
+    line-height: $default-line-height;
+    font-family: $default-font-family; 
+    font-weight: $default-font-weight;   
+    -webkit-text-size-adjust: 100%; 
+    -moz-text-size-adjust:100%; 
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased; 
+}
+
+a{
+    outline: none;
+    &:focus{
+        outline: none;        
+    }
+}
+
+// Heading fonts
+h2{
+    @include fonts(32px, 36px, $default-font-weight);
+    font-family: $default-font-family;
+}
+h3{
+    @include fonts(31px, 32px,$boldFontWeight);
+    font-family: $default-font-family;
+    
+}
+h4{
+    @include fonts(24px, 24px,$mediumFontWeight);
+    font-family: $default-font-family;
+    
+}
+h5{
+    @include fonts(17px, 24px,$mediumFontWeight);
+    font-family: $default-font-family;
+    
+}
+
+h6{
+    @include fonts(15px, 24px,$mediumFontWeight);
+    font-family: $default-font-family;
+    margin: 0;
+}
+
+
+
+// nav 
+.main-nav{
+    li{
+        a{
+            font-family: $default-font-family; 
+            @include fonts(15px,24px, $mediumFontWeight);
+        }
+    }
+
+}
+
+
+#{$all-text-inputs},
+#{$all-buttons}{
+    font-family: $default-font-family; 
+    @include fonts(17px,24px, $default-font-weight);
+}
+#{$all-buttons}{
+    @include fonts(18px,24px, $mediumFontWeight);
+}
+
+
+// Notification
+.notification{
+    .info{
+        h6{
+            font-weight: $regularFontWeight;
+            strong{
+                font-weight: $mediumFontWeight;
+            }
+        }
+        .time{
+            @include fonts(12px, 24px, $regularFontWeight);
+        }
+    }
+}
+
+
+.avatar-inner{
+    span{
+        @include fonts(15px,24px, 300);  
+    }
+}
+
+.inner-item{
+    h6{
+        @include fonts(13px,21px, 700); 
+        text-transform: uppercase;
+    }
+    p{
+        @include fonts(15px,20px, 500);  
+    }
+}
+
+
+.news-wrap{
+    .item-2{
+        .avatar{
+            span{
+                @include fonts(12px,24px, 500); 
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Buttons typography
+.btn{
+    font-size: $default-font-size - 7;
+    line-height: 24px;
+}
+
+
+// Nav Responsive style
+@include media($mobile){
+    .nav-wrap {
+        > ul{
+            li{
+                div {
+                    > a{
+                        font-size: $nav-font-size - 9;
+                    }
+                }
+                
+            }
+        }
+    }
+}

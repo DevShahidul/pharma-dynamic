@@ -1,0 +1,41 @@
+/*  Typography variables */
+
+
+
+
+
+
+
+/* //End  Typography variables */
+
+
+// Color state
+$base-border: $base-text;
+$hovered-text: $secondary-color;
+$hovered-bg: $base-text;
+$error: $theme-red;
+$warning: tint($error, 2%);
+$success: $base-text;
+
+// Button state
+$button-text: $base-text;
+$button-bg: $base-bg;
+$button-border: $base-text;
+$button-hovered-text: $base-bg;
+$button-hovered-bg: $base-text;
+$button-hovered-border: $button-hovered-bg;
+$button-pressed-text: $base-text;
+$button-pressed-bg: $secondary-color;
+$button-pressed-border: $button-pressed-bg;
+$button-focused-shadow: 0 3px 4px 0 $base-text;
+
+// Media screen
+$mobile: min-width 320px max-width 767px;
+$mobileSmall: max-width 320px;
+$mobileLarge: min-width 480px max-width 767px;
+// Tablate screen
+$tablate: min-width 768px max-width 1024px;
+$tablateSmall: min-width 768px max-width 991px;
+$tablatelarge: min-width 992px max-width 1024px;
+
+

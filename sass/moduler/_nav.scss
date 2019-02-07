@@ -1,0 +1,63 @@
+.main-nav{
+    //@include calculateWidth(179);
+    float: left;
+    width: 766px;
+    text-align: center;
+    li{
+        display: inline-block;
+        margin: 34px 21px 0;
+        &> a{
+            display: block;
+            position: relative;
+            img{
+                display: inline-block;
+                vertical-align: middle;
+            }
+            span{
+                display: inline-block;
+                vertical-align: middle;
+                padding-left: 10px;
+            }
+        }
+        &.hasSubnav{
+            a{
+                &::after{
+                    width: 5px;
+                    height: 3px;
+                    content: "";
+                    background-image: url(../svgs/drop.svg);
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+            &:hover{
+                ul{
+                    opacity: 1;
+                    visibility: visible;
+                    @include transform(translateY(0));
+                }
+            }
+        }
+        ul{
+           @include abs-pos(auto, auto, auto, auto);
+           width: auto;
+           padding: 10px 15px;
+           background-color: $white;
+           margin-top: 5px;
+           min-width: 150px;
+           @include transition;
+           opacity: 0;
+           visibility: hidden;
+           @include transform(translateY(50px));
+           li{
+               display: block;
+               text-align: left;
+               width: 100%;
+               margin: 3px 0;
+               a{
+                   white-space: nowrap;
+               }
+           }
+        }
+    }
+}

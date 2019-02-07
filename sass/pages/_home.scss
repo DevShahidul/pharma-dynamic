@@ -1,0 +1,124 @@
+
+.main-content-wrap{
+    @extend %fw;
+    position: relative;
+    z-index: 1;
+    &::before{
+        background-image: url(../svgs/rectangle.svg);
+        @include beforeAfter;
+        @include bg;
+        background-position: left top;
+        position: absolute;
+
+    }
+}
+.search-section{
+    max-width: 697px;
+    margin: 0 auto;
+    @include clearFix;
+    text-align: center;
+    h2{
+        margin-top: 67px;
+        margin-bottom: 0;
+    }
+}
+
+
+//grid - 1
+.grid-container{
+    @extend %fw;
+}
+.team-work-section{
+    margin-top: 107px;
+}
+
+
+
+$my-cool-container-max-width: 1080px;
+
+$my-cool-custom-grid: (
+  columns: 12,
+  gutter: 20px,
+  media: $my-cool-container-max-width,
+);
+
+.my-cool-container {
+    @include grid-container;
+    max-width: $my-cool-container-max-width;
+
+    @include grid-media($my-cool-custom-grid) {
+        background-color: blue;
+    }
+}
+
+
+
+
+// .two-third{}
+
+
+.news-wrap{
+    @extend %fw;
+    .grid-container{
+        grid-template-columns: repeat(2,minmax(342px,1fr)); 
+        
+    
+    .item-1{
+        text-align: center;
+        @include bg;
+        img{
+            width:154px;
+            margin: 0 auto;
+            @include clearFix; 
+        }
+    }
+    .item-2{
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+        background-color:$white;
+        padding:0 40px;
+        .barth-day-item{
+            @extend %fw; 
+            padding-top:18px;
+        }
+        img{
+            float:left; 
+            width:42px;
+        }
+        .avatar{
+            float:left;
+            width: calc(100% - 61px);
+            padding: 0 0 18px 19px;
+            border-bottom:2px solid $base-text;
+            span{
+                float:left;
+            }
+        }
+    }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

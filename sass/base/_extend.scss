@@ -1,0 +1,33 @@
+%bg{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+%fw{
+    float: left;
+    width: 100%;
+}
+
+@include media($mobile){
+    %fwm{
+        float: left;
+        width: 100% !important;
+    }
+    %mobilePadding{
+        padding: 0 36px;
+    }
+
+    %lataraba{
+        left: auto;
+        top: auto;
+        right: auto;
+        bottom: auto;
+    }
+
+}
+
+@include media($mobileSmall){
+    %smallMobilePadding{
+        padding: 0 20px;
+    }
+}

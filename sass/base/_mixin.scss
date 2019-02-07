@@ -1,0 +1,194 @@
+// Transition mixin
+@mixin transition($property: all, $duration: .3s, $timing-function: ease-in-out, $delay: 0s) {
+    -webkit-transition: $property $duration $timing-function $delay;
+    -moz-transition: $property $duration $timing-function $delay;
+    -ms-transition: $property $duration $timing-function $delay;
+    -o-transition: $property $duration $timing-function $delay;
+    transition: $property $duration $timing-function $delay;
+}
+
+// Transform mixin
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -moz-transform: $property;
+    -ms-transform: $property;
+    -o-transform: $property;
+    transform: $property;
+}
+
+//keyframe mixin
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+      @content;
+    }
+  
+    @-moz-keyframes #{$animation-name} {
+      @content;
+    }
+  
+    @-ms-keyframes #{$animation-name} {
+      @content;
+    }
+  
+    @-o-keyframes #{$animation-name} {
+      @content;
+    }
+  
+    @keyframes #{$animation-name} {
+      @content;
+    }
+}
+
+// Animation mixin
+@mixin animation($animation-property) {
+    -webkit-animation: $animation-property;
+    -moz-animation: $animation-property;
+    -ms-animation: $animation-property;
+    -o-animation: $animation-property;
+    animation: $animation-property;
+}
+//border-radius
+@mixin bradius($r:10px){
+    -webkit-border-radius: $r;
+    -moz-border-radius: $r;
+    -ms-border-radius: $r;
+    border-radius: $r;
+
+}
+
+// Clearfix
+@mixin clearFix{
+    &::after{
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+
+@mixin bg{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+}
+
+//center both
+@mixin abs-pos($t:auto,$r:auto,$b:auto,$l:auto){
+    position:absolute;
+    top:$t;
+    right:$r;
+    bottom:$b;
+    left:$l; 
+}
+
+
+
+// Center top left both position mixin
+@mixin centerBoth{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include transform(translateX(-50%) translateY(-50%));
+    text-align: center;
+}
+
+// Center only left position
+@mixin centerLeft {
+    position: absolute;
+    left: 50%;
+    @include transform(translateX(-50%));
+}
+
+// Center only top position
+@mixin centerTop {
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+}
+
+// fonts mixin
+@mixin fonts($font-size, $line-height, $font-weight: 400) {
+    font-size: $font-size;
+    line-height: $line-height;
+    font-style: normal;
+    font-weight: $font-weight;
+}
+
+// Display Inline middle
+@mixin inlineMiddle {
+    display: inline-block; 
+    vertical-align: middle;
+    margin: -2px;
+}
+
+// Full width heiht absolute
+@mixin fullScreenAbs($height: 100%) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: $height;
+}
+
+// Sudo element
+@mixin beforeAfter($width: 100%, $height: 100%, $zindex: -1){
+    content: "";
+    left: 0;
+    top: 0;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: $width;
+    height: $height;
+    z-index: $zindex;
+
+}
+
+// Sass grid
+@mixin grid($cols, $mgn){
+    float: left;
+    margin-right: $mgn;
+    width: ( (100% - (($cols - 1) * $mgn)) / $cols);
+    &:nth-child(#{$cols}n){
+        margin-right: 0;
+    }
+}
+
+// Flex mixin
+@mixin displaFlex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+}
+
+// Flex order
+@mixin flexOrder($order: 1) {
+    -webkit-box-ordinal-group: $order;
+    -webkit-order: $order;
+    -moz-order: $order;
+    -ms-order: $order;
+    order: $order;
+}
+
+// Gradient
+@mixin gradient($top, $bottom){
+    background-image: -moz-linear-gradient(bottom, $top, $bottom);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop($top), color-stop($bottom));
+    background-image: -webkit-linear-gradient(bottom, $top,$bottom); 
+    background-image: -o-linear-gradient(bottom, $top,$bottom);
+    background-image: -ms-linear-gradient(bottom, $top,$bottom); 
+    background-image: linear-gradient(to bottom, $top,$bottom); 
+}
+
+
+
+
+@mixin calculateWidth($width){
+    width: -webkit-calc(100% - $width);
+    width: calc(100% - $width);
+}

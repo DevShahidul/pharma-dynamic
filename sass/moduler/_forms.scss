@@ -1,0 +1,33 @@
+.scearch-wrap{
+    @extend %fw;
+    background-color: $white;
+    margin-top: 22px;
+    position: relative;
+    max-height: 57px;
+    button {
+        float: left;
+        width: 32px;
+        height: 30px;
+        background-color: transparent;
+        padding: 0;
+        border: none;
+        cursor: pointer;
+        @include abs-pos(50%,17px,null, null);
+        margin-top: -16px;
+    }
+}
+
+#{$all-text-inputs}{
+    @extend %fw;
+    height: 57px;
+    background-color: transparent;
+    padding: 0px 20px 0px 33px;
+    border: none;
+    box-shadow: $default-shadow;
+    @include bradius(3px);
+}
+#{$all-text-inputs-focus}{
+    box-shadow: 0 2px 4px 0 rgba(138, 149, 255, 0.31);
+    border-style: solid;
+    border-width: 1px;
+}
