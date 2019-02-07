@@ -76,9 +76,11 @@
     height: 305px;
     padding: 0 63px;
     overflow-y: auto;
+    position: relative;
 }
 .notification{
     margin-top: 15px;
+    position: relative;
     @extend %fw;
     .avatar{
         float: left;

@@ -127,8 +127,44 @@ h6{
             }
         }
     }
+    .notification{
+        .info{
+            h6{
+                font-weight: $mediumFontWeight;
+            }
+        }
+        .chating{
+            span{
+                @include fonts(12px, 24px, $regularFontWeight);
+            }
+        }
+    }
 }
 
+.column{
+    .content{
+        h4{
+            font-weight: $mediumFontWeight;
+            margin-bottom: 0;
+        }
+        span{
+            @include fonts(15px, 24px, $default-font-weight);
+        }
+    }
+}
+
+.one-third{
+    @include fonts(15px, 20px, $regularFontWeight);
+    .two-half{
+        h6{
+            @include fonts(13px, 21px, $boldFontWeight);
+        }
+        p{
+            font-weight: $mediumFontWeight;
+            line-height: 20px;
+        }
+    }
+}
 
 
 

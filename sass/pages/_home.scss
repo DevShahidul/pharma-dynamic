@@ -24,6 +24,20 @@
 }
 
 
+// Title wrap style 
+.title-wrap{
+    text-align: left;
+    margin-bottom: 28px;
+    img{
+        @include inlineMiddle;
+    }
+    h4{
+        @include inlineMiddle;
+        margin-left: 12px;
+    }
+}
+
+
 //grid - 1
 .grid-container{
     @extend %fw;
@@ -31,70 +45,174 @@
 .team-work-section{
     margin-top: 107px;
 }
+.column{
+    float: left;
+    @extend %fw;
+    &> img{
+        float: left;
+        width: 20px;
+        height: 20px;
+    }
+    .content{
+        float: left;
+        width: 269px;
+        margin-left: 17px;
+    }
+}
+.two-third{
+    width: 711px;
+    margin-right: 25px;
+}
+.one-third{
+    width: 342px;
+    .two-half{
+        width: 158px;
+        border-radius: 10px;
+        margin-right: 25px;
+        margin-top: 14px;
+        text-align: center;
+        padding: 20px 15px;
+        box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.2);
+        &:nth-child(3){
+            margin-right: 0;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+        }
+        img{
+            width: 84px;
+            height: 84px;
+            margin-top: 12px;
+            border-radius: 50%;
+            overflow: hidden;
+            float: none;
+            display: inline-block;
+        }
+        p{
+            margin-top: 7px;
+        }
 
+    }
+    .link-wrap{
+        @extend %fw;
+        text-align: center;
+        a{
+            margin-top: 19px;
+            display: inline-block;
+            text-decoration: underline;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+}
 
+// Slider style 
+.slider-wrap,
+.slider-item{
+    @extend %fw;
+}
+.slider-item{
+    @include bg;
+    min-height: 299px;
+    border-radius: 10px;
+}
 
-$my-cool-container-max-width: 1080px;
-
-$my-cool-custom-grid: (
-  columns: 12,
-  gutter: 20px,
-  media: $my-cool-container-max-width,
-);
-
-.my-cool-container {
-    @include grid-container;
-    max-width: $my-cool-container-max-width;
-
-    @include grid-media($my-cool-custom-grid) {
-        background-color: blue;
+.slick-dots{
+    li{
+        width: 7px;
+        height: 7px;
+        button{
+            width: 7px;
+            height: 7px;
+            &:hover{
+                background: transparent;
+            }
+            &::before{
+                opacity: 1;
+                content: "";
+                width: 7px;
+                height: 7px;
+                background-image: url(../svgs/Oval-notactive.svg);
+            }
+            &::after{
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        &.slick-active{
+            button{
+                &::before{
+                    opacity: 1;
+                    background-image: url(../svgs/Oval-active.svg);
+                }
+            }
+        }
     }
 }
 
 
-
-
-// .two-third{}
-
-
-.news-wrap{
+// New wrap
+.news-wrap,
+.title-wrap{
     @extend %fw;
-    .grid-container{
-        grid-template-columns: repeat(2,minmax(342px,1fr)); 
-        
-    
-    .item-1{
+}
+.news-wrap{
+    margin-top: 67px;
+    .title-wrap{
+        margin-bottom: 18px;
+    }
+    .slider-content{
+        float: none;
+        @include alignCenter(248px);
+        padding-top: 57px;
+        padding-bottom: 60px;
         text-align: center;
-        @include bg;
         img{
-            width:154px;
-            margin: 0 auto;
-            @include clearFix; 
+            @include alignCenter(154px);
+            height: 154px;
+        }
+        h4{
+            margin-top: 10px;
         }
     }
-    .item-2{
+    .notification-item-wrap{
+        padding: 40px;
+        height: auto;
+        overflow: inherit;
+        border-radius: 10px;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-        background-color:$white;
-        padding:0 40px;
-        .barth-day-item{
-            @extend %fw; 
-            padding-top:18px;
+        &::after{
+            content: "";
+            position: absolute;
+            left: 26px;
+            right: 18px;
+            bottom: 40px;
+            height: 79px;
         }
-        img{
-            float:left; 
-            width:42px;
+        .notification{
+            .info{
+                width: 199px;
+            }
         }
-        .avatar{
-            float:left;
-            width: calc(100% - 61px);
-            padding: 0 0 18px 19px;
-            border-bottom:2px solid $base-text;
+        .chating{
+            position: absolute;
+            right: 0; 
+            top: 0;
+            img,
             span{
-                float:left;
+                @include inlineMiddle;
             }
         }
     }
+}
+
+.upcoming-notification{
+    @extend %fw;
+    margin-top: 15px;
+    text-align: center;
+    a{
+        display: inline-block;
     }
+
 }
 
 

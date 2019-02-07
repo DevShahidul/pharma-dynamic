@@ -29,3 +29,22 @@
     @include gradient(#f953c6, #b91d73);
 }
 
+%whiteGradient{
+    @include gradient(rgba(255, 255, 255, 0), $white);
+}
+
+.one-third{
+    .two-half{
+        @extend %pourpleGradient;
+        &:nth-child(3){
+            @extend %redGradient;
+        }
+    }
+}
+
+
+.notification-item-wrap{
+    &::after{
+        @extend %whiteGradient;
+    }
+}

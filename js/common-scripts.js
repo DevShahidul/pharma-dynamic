@@ -49,37 +49,44 @@
             $("body").toggleClass("show");
         })
 
+
+        $(".slider-wrap").slick({
+
+            // normal options...
+            
+            dots: true,
+            arrows: false,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          
+            // the magic
+            responsive: [{
+          
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 3,
+                  infinite: true
+                }
+          
+              }, {
+          
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 2,
+                  dots: true
+                }
+          
+              }, {
+          
+                breakpoint: 300,
+                settings: "unslick" // destroys slick
+          
+              }]
+        });
 		
 	})// End ready function.
 
-	$(window).on('load', function(){
-        // Begin common slider
-        if ( $('div.slider-wrap').length == 0 ) return false
-
-        $('div.slider-wrap').flexslider({
-            animation:"fade",
-            slideshow: true,
-            directionNav: false,
-            controlNav:false,
-            slideshowSpeed: 5000,  //Integer: Set the speed of the slideshow cycling, in milliseconds
-            animationSpeed: 600, 
-            useCSS: false,
-            start: function(slider){
-                //$('body').removeClass('loading');
-
-            }
-            ,
-            animationLoop: true,
-            pauseOnAction: false, // default setting
-
-            after: function(slider) {
-
-            }
-        })	
-
-    	$('div.slider-wrap video').trigger('play');
-
-    })
 	
 
 })(jQuery)

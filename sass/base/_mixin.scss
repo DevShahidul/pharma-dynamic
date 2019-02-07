@@ -116,9 +116,9 @@
 
 // Display Inline middle
 @mixin inlineMiddle {
+    float: none;
     display: inline-block; 
     vertical-align: middle;
-    margin: -2px;
 }
 
 // Full width heiht absolute
@@ -185,10 +185,14 @@
     background-image: linear-gradient(to bottom, $top,$bottom); 
 }
 
-
-
-
 @mixin calculateWidth($width){
     width: -webkit-calc(100% - $width);
     width: calc(100% - $width);
+}
+
+@mixin alignCenter($width) {
+    float: none;
+    width: $width;
+    margin: 0 auto; 
+    clear: both;
 }

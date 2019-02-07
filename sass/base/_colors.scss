@@ -119,6 +119,35 @@ h3{
 }
 
 
+.one-third{
+    .two-half{
+        h6,
+        p{
+            color: $white;
+        }
+    }
+    .link-wrap{
+        a{
+            color: $theme-red;
+        }
+    }
+}
+
+
+// News section
+.news-wrap{
+    .slider-content{
+        h4{
+            color: $white;
+        }
+    }
+}
+
+.notification-item-wrap{
+    background-color: $white;
+}
+
+
 
 // Grid item colors
 .avatar-inner{
@@ -127,21 +156,29 @@ h3{
     }
 }
 
-.inner-item{
-    h6{
-        color:$white;  
+.column{
+    .column {
+        h6{
+            color:$white;  
+        }
+        p{
+            color:$white;
+        }
     }
-    p{
-        color:$white;
-    }
+    
 }
 
 .news-wrap{
-    .item-2{
-        .avatar{
-            span{
-                color:$shuttle-grey; 
-            }
+    .info{
+        h6{
+            color: $base-text;
         }
     }
+}
+
+.upcoming-notification{
+    a{
+        color: $secondary-color;
+    }
+
 }
