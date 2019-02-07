@@ -35,6 +35,8 @@
             })
         }
 
+        $(".main-nav li").find("ul").parent().addClass("hasSubnav");
+
         var heroHeight = $(".hero-section").outerHeight();
         $(window).on("scroll", function(){
             if($(window).scrollTop() > heroHeight - 116 ){

@@ -925,7 +925,9 @@ button:hover::after, [type='button']:hover::after, [type='reset']:hover::after, 
   text-align: center; }
   .main-nav li {
     display: inline-block;
-    margin: 34px 21px 0; }
+    margin: 34px 21px 0;
+    position: relative;
+    z-index: 99; }
     .main-nav li > a {
       display: block;
       position: relative; }
@@ -936,7 +938,7 @@ button:hover::after, [type='button']:hover::after, [type='reset']:hover::after, 
         display: inline-block;
         vertical-align: middle;
         padding-left: 10px; }
-    .main-nav li.hasSubnav a::after {
+    .main-nav li.hasSubnav > a::after {
       width: 5px;
       height: 3px;
       content: "";
@@ -960,7 +962,6 @@ button:hover::after, [type='button']:hover::after, [type='reset']:hover::after, 
       width: auto;
       padding: 10px 15px;
       background-color: #ffffff;
-      margin-top: 5px;
       min-width: 150px;
       -webkit-transition: all 0.3s ease-in-out 0s;
       -moz-transition: all 0.3s ease-in-out 0s;
@@ -1107,7 +1108,7 @@ button:hover::after, [type='button']:hover::after, [type='reset']:hover::after, 
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-    z-index: inherit;
+    z-index: 9;
     background-color: rgba(0, 0, 0, 0.2); }
 
 .notification-item-wrap {
@@ -1228,6 +1229,7 @@ button:hover::after, [type='button']:hover::after, [type='reset']:hover::after, 
       float: none;
       display: inline-block; }
       .one-third .two-half figure img {
+        width: 100%;
         -webkit-transition: all 0.3s ease-in-out 0s;
         -moz-transition: all 0.3s ease-in-out 0s;
         -ms-transition: all 0.3s ease-in-out 0s;
@@ -1255,7 +1257,10 @@ button:hover::after, [type='button']:hover::after, [type='reset']:hover::after, 
   background-position: center center;
   background-size: cover;
   min-height: 299px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  display: none; }
+  .slider-item:first-child {
+    display: block; }
 
 .slick-dots li {
   width: 7px;
@@ -1353,15 +1358,16 @@ button:hover::after, [type='button']:hover::after, [type='reset']:hover::after, 
       overflow: hidden;
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); }
       .one-third-gellary-section .one-third figure img {
+        width: 100%;
         -webkit-transition: all 0.3s ease-in-out 0s;
         -moz-transition: all 0.3s ease-in-out 0s;
         -ms-transition: all 0.3s ease-in-out 0s;
         -o-transition: all 0.3s ease-in-out 0s;
         transition: all 0.3s ease-in-out 0s; }
     .one-third-gellary-section .one-third h5 {
-      padding-top: 22px;
+      padding-top: 27px;
       padding-bottom: 12px;
-      margin-top: -5px;
+      margin-top: -10px;
       position: relative;
       z-index: -1;
       border-radius: 0 0 10px 10px;

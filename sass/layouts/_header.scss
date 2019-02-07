@@ -67,7 +67,7 @@
     position: relative;
     &::after{
         @include abs-pos(0, 0, 0, 0);
-        @include beforeAfter($zindex: inherit);
+        @include beforeAfter($zindex: 9);
         background-color: rgba(0, 0, 0, 0.2);
     }
 }

@@ -87,6 +87,7 @@
             float: none;
             display: inline-block;
             img{
+                width: 100%;
                 @include transition;
             }
         }
@@ -125,6 +126,10 @@
     @include bg;
     min-height: 299px;
     border-radius: 10px;
+    display: none;
+    &:first-child{
+        display: block;
+    }
 }
 
 .slick-dots{
@@ -250,14 +255,15 @@
             overflow: hidden;
             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
             img{
+                width: 100%;
                 @include transition;
             }
         }
         h5{
             @extend %fw;
-            padding-top: 22px;
+            padding-top: 27px;
             padding-bottom: 12px;
-            margin-top: -5px;
+            margin-top: -10px;
             position: relative;
             z-index: -1;
             border-radius: 0 0 10px 10px;

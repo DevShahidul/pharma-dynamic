@@ -6,6 +6,8 @@
     li{
         display: inline-block;
         margin: 34px 21px 0;
+        position: relative;
+        z-index: 99;
         &> a{
             display: block;
             position: relative;
@@ -20,7 +22,7 @@
             }
         }
         &.hasSubnav{
-            a{
+            &> a{
                 &::after{
                     width: 5px;
                     height: 3px;
@@ -43,7 +45,6 @@
            width: auto;
            padding: 10px 15px;
            background-color: $white;
-           margin-top: 5px;
            min-width: 150px;
            @include transition;
            opacity: 0;
