@@ -7,6 +7,7 @@
         background-image: url(../svgs/rectangle.svg);
         @include beforeAfter;
         @include bg;
+        height: 23%;
         background-position: left top;
         position: absolute;
 
@@ -77,7 +78,7 @@
             margin-right: 0;
             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
         }
-        img{
+        figure{
             width: 84px;
             height: 84px;
             margin-top: 12px;
@@ -85,6 +86,16 @@
             overflow: hidden;
             float: none;
             display: inline-block;
+            img{
+                @include transition;
+            }
+        }
+        &:hover{
+            figure{
+                img{
+                    @include transform(scale(1.05));
+                }
+            }
         }
         p{
             margin-top: 7px;
@@ -160,6 +171,9 @@
     .title-wrap{
         margin-bottom: 18px;
     }
+    .slider-item{
+        min-height: 408px;
+    }
     .slider-content{
         float: none;
         @include alignCenter(248px);
@@ -169,9 +183,10 @@
         img{
             @include alignCenter(154px);
             height: 154px;
+            margin-top: 21px;
         }
         h4{
-            margin-top: 10px;
+            margin-top: 15px;
         }
     }
     .notification-item-wrap{
@@ -215,7 +230,144 @@
 
 }
 
+.one-third-gellary-section{
+    @extend %fw;
+    margin-top: 69px;
+    .one-third{
+        @include grid(3, 2.777777777777778%);
+        margin-top: 28px;
+        position: relative;
+        z-index: 1;
+        &:nth-of-type(-n+3){
+            margin-top: 0;
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+        figure{
+            @extend %fw;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+            img{
+                @include transition;
+            }
+        }
+        h5{
+            @extend %fw;
+            padding-top: 22px;
+            padding-bottom: 12px;
+            margin-top: -5px;
+            position: relative;
+            z-index: -1;
+            border-radius: 0 0 10px 10px;
+            text-align: center;
+            @include transition;
+        }
+        &:hover{
+            h5{
+                box-shadow: 0 8px 4px 0 rgba(0, 0, 0, 0.2);
+            }
+            figure{
+                img{
+                    @include transform(scale(1.05));
+                }
+            }
+        }
+    }
+}
 
+.btn-wrap{
+    margin-top: 25px;
+}
+
+.one-fourth{
+    @include grid(4, 2.12962962962963%);
+    margin-top: 28px;
+    border-radius: 10px;
+    text-align: center;
+    &:nth-of-type(-n+4){
+        margin-top: 0;
+    }
+    figure{
+        border-radius: 10px;
+        overflow: hidden;
+        img{
+            @include transition;
+        }
+    }
+    &:hover{
+        figure{
+            img{
+                @include transform(scale(1.05));
+            }
+        }
+    }
+}
+
+// Gellary section
+.one-fourth-gellary-section{
+    @extend %fw;
+    margin-top: 71px;
+    .one-fourth{
+        &:nth-of-type(-n+4){
+            margin-top: 0;
+        }
+    }
+    &.connect-to-more-section{
+        .one-fourth{
+            padding: 31px 20px 26px;
+            margin-top: 42px;
+            @include grid(4, 3.055555555555556%);
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+
+.new-flash-section{
+    @extend .one-fourth-gellary-section;
+    padding-bottom: 121px;
+}
+.single-news{
+    @extend %fw;
+    padding: 25px 24px 25px 47px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    h4{
+        @include inlineMiddle;
+        width: 855px;
+    }
+    a{
+        width: 76px;
+        @include inlineMiddle;
+        margin-left: 72px;
+        text-align: center;
+    }
+}
+
+
+
+
+
+// Company documents section
+.company-documents-section{
+    @extend %fw;
+    padding: 92px 0 114px;
+    .one-fourth{
+        @include transition;
+        h5{
+            @include transition;
+            padding: 28px 10px 18px;
+            margin-top: -10px;
+            border-radius: 0 0 10px 10px;
+        }
+    }
+    .btn-wrap{
+        margin-top: 50px;
+    }
+}
 
 
 

@@ -1,3 +1,9 @@
+
+.btn-wrap{
+    @extend %fw;
+    text-align: center;
+}
+
 #{$all-buttons},
 .btn{
     display: inline-block;
@@ -5,23 +11,20 @@
     background-color: transparent;
     color: $button-text;
     border: 1px solid $button-border;
-    width: 303px; 
-    height: 53px;
+    width: 237px; 
+    height: 57px;
+    line-break: 55px;
     text-align: center;
     text-decoration: none;
     @include transition;
-    &::after{
-        content: "";
-        position: absolute;
-        z-index: -1;
-        background-color: $button-hovered-bg;
-        width: 0;
-        height: 100% + 2;
-        left: 0;
-        top: -1px;
-        @include transition;
+}
 
-    }
+.default-btn{
+ height: 65px;
+ line-height: 63px;
+ box-shadow: 0 2px 4px 0 rgba(138, 149, 255, 0.41);
+ border-radius: 32.5px;
+ border: 0;
 }
 
 #{$all-buttons-hover}{

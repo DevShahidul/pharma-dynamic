@@ -23,6 +23,7 @@ $base-galleries: rgba(138, 149, 255, 0.41);
 
 body{
     color:$base-text;
+    background: $base-bg;
 }
 h2,h4,h5{
     color:$base-text; 
@@ -91,6 +92,11 @@ h3{
 
 .recipient-form-wrap{
     @extend %alabasterBackground;
+}
+
+// Main content section
+.main-content-wrap{
+    background-color: $base-bg;
 }
 
 // Form color
@@ -181,4 +187,155 @@ h3{
         color: $secondary-color;
     }
 
+}
+
+
+.one-third{
+    &:hover{
+        h5{
+            background-color: $base-text;
+            color: $white;
+        }
+    }
+}
+
+.btn{
+    &.default-btn{
+        background-color: $white;
+        color: $mariner;
+        &:hover{
+            background-color: $mariner;
+            color: $white;
+        }
+    }
+}
+
+// Gellary section
+.one-fourth-gellary-section{
+    &.connect-to-more-section{
+        .one-fourth{
+            background-color: $white;
+        }
+    }
+}
+
+// Connect to more section
+.company-documents-section,
+.white-bg{
+    background-color: $white;
+}
+
+.single-news{
+    color: $white;
+    h4,
+    a{
+        color: $white;
+    }
+    &.white-bg{
+        color: $base-text;
+        h4,
+        a{
+            color: $base-text;
+        }
+    }
+}
+
+.navy-blue-bg{
+    background-color: $secondary-color;
+}
+.dark-blue-bg{
+ background-color: $base-text;   
+}
+
+
+
+.company-documents-section{
+    .one-fourth{
+        &.bush{
+            h5{
+                color: $bush;
+            }
+            &:hover{
+                h5{
+                    background-color: $bush;
+                }
+            }
+        }
+        &.light-green{
+            h5{
+                color: #3b5504;
+            }
+            &:hover{
+                h5{
+                    background-color: #3b5504;
+                }
+            }
+        }
+        &.purple{
+            h5{
+                color: $kingfisher;
+            }
+            &:hover{
+                h5{
+                    background-color: $kingfisher;
+                }
+            }
+        }
+        &.dark-green{
+            h5{
+                color: $outer-space;
+            }
+            &:hover{
+                h5{
+                    background-color: $outer-space;
+                }
+            }
+        }
+        &.light-red{
+            h5{
+                color: $mandy;
+            }
+            &:hover{
+                h5{
+                    background-color:  $mandy;
+                }
+            }
+        }
+        &.dark-purple{
+            h5{
+                color: $black-rock;
+            }
+            &:hover{
+                h5{
+                    background-color: $black-rock;
+                }
+            }
+        }
+        &.gray{
+            h5{
+                color: $cod-gray
+            }
+            &:hover{
+                h5{
+                    background-color: $cod-gray
+                }
+            }
+        }
+        &.magenta{
+            h5{
+                color: $bordeaux;
+            }
+            &:hover{
+                h5{
+                    background-color: $bordeaux;
+                }
+            }
+        }
+        &:hover{
+            h5{
+                color: $white;
+            }
+        }
+
+    }
 }

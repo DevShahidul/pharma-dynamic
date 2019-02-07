@@ -167,23 +167,15 @@ h6{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 // Buttons typography
 .btn{
     font-size: $default-font-size - 7;
     line-height: 24px;
 }
 
+.default-btn{
+    font-weight: $mediumFontWeight;
+}
 
 // Nav Responsive style
 @include media($mobile){
@@ -197,6 +189,27 @@ h6{
                 }
                 
             }
+        }
+    }
+}
+
+
+.single-news{
+    h4{
+        @include fonts(null, 28px, $default-font-weight);
+    }
+    a{
+        @include fonts(15px, 31px, $mediumFontWeight);
+        text-decoration: none;
+    }
+}
+
+.company-documents-section{
+    .one-fourth{
+        h5{
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: $mediumFontWeight;
         }
     }
 }

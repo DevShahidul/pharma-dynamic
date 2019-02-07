@@ -14,6 +14,11 @@
     @include gradient(#11998e, #38ef7d);
 }
 
+// Dark Green
+%darkGreenGradient{
+    @include gradient(#155799, #159957);
+}
+
 //Light green
 %lightGreenGradient{
     @include gradient(#f8ffae, #43c6ac);
@@ -22,6 +27,10 @@
 // Red
 %redGradient{
     @include gradient(#ff9966, #ff5e62);
+}
+// Dark red
+%darkRedGradient{
+    @include gradient(#ff6a00, #ee0979);
 }
 
 // Magenta
@@ -47,4 +56,34 @@
     &::after{
         @extend %whiteGradient;
     }
+}
+
+
+.gradient-text{
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+    &.green{
+        @extend %greenGradient;
+    }
+    &.dark-green{
+        @extend %darkGreenGradient;
+    }
+    &.blue{
+        @extend %blueGradient;
+    }
+    &.magenta{
+        @extend %magentaGradient;
+    }
+    &.red{
+        @extend %redGradient;
+    }
+    &.dark-red{
+        @extend %darkRedGradient;
+    }
+    &.purple{
+        @extend %pourpleGradient;
+    }
+  
 }
