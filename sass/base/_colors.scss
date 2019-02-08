@@ -339,3 +339,15 @@ h3{
 
     }
 }
+
+// Scrollbar
+.scrollable{
+    .scroll-bar{
+        &.vertical{
+            background-color: #d2d6e2;
+            .thumb{
+                background-color: #d2d6e2;
+            }
+        }
+    }
+} 

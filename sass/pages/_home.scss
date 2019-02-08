@@ -19,7 +19,7 @@
     @include clearFix;
     text-align: center;
     h2{
-        margin-top: 67px;
+        margin-top: 75px;
         margin-bottom: 0;
     }
 }
@@ -58,6 +58,10 @@
         float: left;
         width: 269px;
         margin-left: 17px;
+        span{
+            display: block;
+            margin-top: 5px;
+        }
     }
 }
 .two-third{
@@ -70,7 +74,7 @@
         width: 158px;
         border-radius: 10px;
         margin-right: 25px;
-        margin-top: 14px;
+        margin-top: 22px;
         text-align: center;
         padding: 20px 15px;
         box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.2);
@@ -131,7 +135,15 @@
         display: block;
     }
 }
-
+.slick-dotted{
+    &.slick-slider{
+        margin-bottom: 0;
+        padding-bottom: 40px;
+        .slick-dots{
+            bottom: 0;
+        }
+    }
+}
 .slick-dots{
     li{
         width: 7px;
@@ -172,7 +184,7 @@
     @extend %fw;
 }
 .news-wrap{
-    margin-top: 67px;
+    margin-top: 55px;
     .title-wrap{
         margin-bottom: 18px;
     }
@@ -194,8 +206,12 @@
             margin-top: 15px;
         }
     }
+    .one-third{
+        margin-top: 5px;
+    }
     .notification-item-wrap{
-        padding: 40px;
+        padding: 25px 40px 40px;
+        margin-top: 7px;
         height: auto;
         overflow: inherit;
         border-radius: 10px;
@@ -211,6 +227,7 @@
         .notification{
             .info{
                 width: 199px;
+                padding-bottom: 20px;
             }
         }
         .chating{
@@ -237,10 +254,10 @@
 
 .one-third-gellary-section{
     @extend %fw;
-    margin-top: 69px;
+    margin-top: 55px;
     .one-third{
         @include grid(3, 2.777777777777778%);
-        margin-top: 28px;
+        margin-top: 35px;
         position: relative;
         z-index: 1;
         &:nth-of-type(-n+3){
@@ -284,7 +301,7 @@
 }
 
 .btn-wrap{
-    margin-top: 25px;
+    margin-top: 35px;
 }
 
 .one-fourth{
@@ -314,15 +331,15 @@
 // Gellary section
 .one-fourth-gellary-section{
     @extend %fw;
-    margin-top: 71px;
+    margin-top: 65px;
     .one-fourth{
         &:nth-of-type(-n+4){
-            margin-top: 0;
+            margin-top: 0 !important;
         }
     }
     &.connect-to-more-section{
         .one-fourth{
-            padding: 31px 20px 26px;
+            padding: 30px 20px 34px;
             margin-top: 42px;
             @include grid(4, 3.055555555555556%);
             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
@@ -337,10 +354,13 @@
 }
 .single-news{
     @extend %fw;
-    padding: 25px 24px 25px 47px;
+    padding: 24px 24px 23px 47px;
     margin-top: 20px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    &:nth-child(2){
+        margin-top: 0;
+    }
     h4{
         @include inlineMiddle;
         width: 855px;
@@ -360,7 +380,11 @@
 // Company documents section
 .company-documents-section{
     @extend %fw;
-    padding: 92px 0 114px;
+    padding: 87px 0 114px;
+    margin-top: 0;
+    .title-wrap{
+        margin-bottom: 35px;
+    }
     .one-fourth{
         @include transition;
         h5{

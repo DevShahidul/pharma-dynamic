@@ -3,23 +3,19 @@
 	$(function(){
 
         // Begin input common focus and blur for value.
-        var input = $('input:text, input:password,input[type="email"],input[type="tel"],input[type="number"],input[type="search"], textarea');
+        $('input:text,input[type="email"],input[type="search"],input[type="tel"],input[type="number"],input:password,textarea').focus(function () {
+            if (this.value == this.defaultValue) {
+                this.value = ''
+            }
+        })
+        $('input:text,input[type="email"],input[type="search"],input[type="tel"],input[type="number"],input:password,textarea').blur(function () {
+            if (!this.value) {
+                this.value = this.defaultValue;
+            }
+        })
+        // Ends input common focus and blur for value.
 
-        $(input).each(function () {
-            var inputText = $(this).attr('placeholder')
-            $(this).focus(function () {
-                if ($(this).val().length === 0) {
-                    $(this).attr('placeholder', '');
-                }
-            }).blur(function () {
-                if ($(this).val().length === 0) {
-                    $(this).attr('placeholder', inputText);
-                    $(this).parent().removeClass('active');
-                } else if ($(this).val().length > 0) {
-                    $(this).parent().addClass('active');
-                }
-            });
-        });
+
         // Ends input common focus and blur for value.
 		
         // Phone nav click function 
@@ -86,6 +82,9 @@
           
               }]
         });
+
+
+        $("#myElement").customScrollbar();
 		
 	})// End ready function.
 

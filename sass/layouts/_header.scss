@@ -73,9 +73,9 @@
 }
 .notification-item-wrap{
     @extend %fw;
-    height: 305px;
+    //height: 305px;
     padding: 0 63px;
-    overflow-y: auto;
+    //overflow-y: auto;
     position: relative;
 }
 .notification{
